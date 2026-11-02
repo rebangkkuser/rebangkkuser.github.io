@@ -81,6 +81,13 @@
     });
   });
 
+  var avatar = document.querySelector(".avatar");
+  if (avatar) {
+    avatar.addEventListener("error", function () {
+      avatar.style.display = "none";
+    });
+  }
+
   apply(lang);
   setInterval(tick, 1000);
 })();
